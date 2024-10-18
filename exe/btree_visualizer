@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$LOAD_PATH << File.join(__dir__, '../lib')
+require 'btree_visualizer'
+
+btree = BtreeVisualizer::Btree.new(2)
+[10, 20, 5, 6, 12, 30, 7, 17, 23, 40, 50].each { |num| btree.insert(num) }
+btree.print
+
+# BtreeVisualizer::CLI.new.run
